@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1;
+}
+
+body {
+    @apply bg-white text-gray-800 dark:text-gray-200;
+}
+
+.Table {
+    @apply bg-white dark:bg-black-400 rounded-lg w-full border-collapse border-spacing-0;
+}
+
+.Table thead {
+    @apply sticky top-0 m-0 bg-white dark:bg-black-300;
+}
+
+.Table th {
+    @apply text-left py-3 font-bold text-gray-600 px-4
+    dark:text-gray-300 text-xs border-b border-gray-200
+    dark:border-black-300 capitalize;
+}
+
+.Table tr {
+    @apply border-b border-gray-100 dark:border-black-400;
+}
+
+.Table tr:last-child {
+    @apply border-transparent;
+}
+
+.Table td {
+    @apply py-4 px-4 text-sm font-medium;
+}
